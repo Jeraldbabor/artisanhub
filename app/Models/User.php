@@ -51,18 +51,19 @@ class User extends Authenticatable
     /**
      * Get all products for the user.
      */
-    public function products()
-    {
+    public function products(){
         return $this->hasMany(Product::class);
     }
 
-    public function categories()
-    {
+    public function categories(){
         return $this->hasMany(Category::class);
     }
-    public function notifications(){
 
+    public function notifications(){
     return $this->hasMany(Notification::class);
-    
+    }
+
+    public function orders(){
+    return $this->hasMany(Order::class);
     }
 }

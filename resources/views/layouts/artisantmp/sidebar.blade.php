@@ -85,13 +85,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('artisan.customers') }}" class="nav-link {{ request()->routeIs('artisan.customers') ? 'active' : '' }}">
                         <i class="nav-icon far fa-address-card"></i>
                         <p>Customers</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('artisan.orders.index') }}" class="nav-link">
+                    <a href="{{ route('artisan.orders.index') }}" class="nav-link {{ request()->routeIs('artisan.orders.index') ? 'active' : '' }}">
                         <i class="nav-icon far fa-clipboard"></i>
                         <p>Orders</p>
                     </a>

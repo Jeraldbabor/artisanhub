@@ -34,7 +34,7 @@
 <div class="card mb-4">
     <div class="card-header d-flex justify-content-between align-items-center">
         <h5 class="mb-0">My Categories</h5>
-        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#createCategoryModal">
+        <button class="btn btn-sm btn-primary ml-auto" data-toggle="modal" data-target="#createCategoryModal">
             <i class="fas fa-plus"></i> Add Category
         </button>
     </div>

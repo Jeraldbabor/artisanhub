@@ -74,6 +74,8 @@ Route::middleware(['auth', 'artisan'])->group(function () {
     Route::put('orders/update-status/{order}', [ArtisanController::class, 'updateStatus'])->name('artisan.orders.update-status');
     Route::delete('/artisan/orders/{order}', [ArtisanController::class, 'destroyOrder'])->name('artisan.orders.destroy');
 
+    Route::get('/artisan/customers', [ArtisanController::class, 'customers'])->name('artisan.customers');
+    
     Route::resource('categories', CategoryController::class)->except(['show']);
 });
 

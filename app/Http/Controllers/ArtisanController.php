@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\category;
@@ -172,6 +173,32 @@ class ArtisanController extends Controller
         } catch (\Exception $e) {
             return back()->with('error', 'Error deleting product: ' . $e->getMessage());
         }
+    }
+
+    public function customers(){
+    // Get unique customers who have ordered the artisan's products
+    $customers = User::whereHas('orders.items.product', function($query) {
+            $query->where('user_id', auth()->id());
+        })
+        ->withCount(['orders' => function($query) {
+            $query->whereHas('items.product', function($q) {
+                $q->where('user_id', auth()->id());
+            });
+        }])
+        ->with(['orders' => function($query) {
+            $query->whereHas('items.product', function($q) {
+                $q->where('user_id', auth()->id());
+            })
+            ->with(['items' => function($query) {
+                $query->whereHas('product', function($q) {
+                    $q->where('user_id', auth()->id());
+                });
+            }])
+            ->orderBy('created_at', 'desc');
+        }])
+        ->paginate(10);
+
+    return view('artisan.customers.index', compact('customers'));
     }
 
     public function index(Request $request){

@@ -59,7 +59,7 @@
                         <strong class="product-price">₱{{ number_format($product->price, 2) }}</strong>
 
                         <!-- Display product description -->
-                        <p class="product-description">{{ $product->description }}</p>
+                        <p class="product-description">{{ Str::limit($product->description, 100, '...') }}</p>
 
                         <!-- Add to Cart Form -->
                         <form action="{{ route('cart.add') }}" method="POST" class="mt-3">
