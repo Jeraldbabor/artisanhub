@@ -29,7 +29,7 @@
         color: #4e73df;
     }
 
-    /* Add this to your style section */
+ 
     .swal2-toast {
         font-size: 0.875rem !important;
         padding: 0.75rem 1rem !important;
@@ -76,7 +76,7 @@
         <script>
             setTimeout(function() {
                 $('.alert-success').alert('close');
-            }, 2000); // Closes the alert after 5 seconds
+            }, 2000); 
         </script>
     @endif
     
@@ -229,8 +229,8 @@
                                 </p>
                             </div>
                             <div class="col-md-6">
-                                <p><strong>Phone:</strong> {{ $customer->phone ?? 'N/A' }}</p>
-                                <p><strong>Address:</strong> {{ $customer->address ?? 'N/A' }}</p>
+                                <p><strong>Phone:</strong> {{ $customer->orders->first()->phone ?? 'N/A' }}</p>
+                                <p><strong>Address:</strong> {{ $customer->orders->first()->address ?? 'N/A' }}</p>
                             </div>
                         </div>
                     </div>
