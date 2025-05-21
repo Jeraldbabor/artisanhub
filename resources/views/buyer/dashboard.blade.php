@@ -33,7 +33,8 @@
 				<div class="row justify-content-between">
 					<div class="col-lg-6">
 						<h2 class="section-title">Why Choose Us</h2>
-						<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+						<p>At Artisan Hub, we believe in more than just selling products — we support creators, celebrate craftsmanship, and connect you with pieces that tell a story. When you shop with us, you're supporting a vibrant community of skilled artisans.</p>
+						<p>Join us in celebrating creativity, quality, and community.</p>
 
 						<div class="row my-5">
 							<div class="col-6 col-md-6">
@@ -42,7 +43,7 @@
 										<img src="{{ asset('images/truck.svg') }}" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Fast &amp; Free Shipping</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>We deliver handmade treasures straight to your door — quickly and at no extra cost.</p>
 								</div>
 							</div>
 
@@ -52,7 +53,7 @@
 										<img src="{{asset('images/bag.svg')}}" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Easy to Shop</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>Our platform is designed for simplicity and beauty. Discover unique items and enjoy a seamless checkout in just a few clicks.</p>
 								</div>
 							</div>
 
@@ -62,7 +63,7 @@
 										<img src="{{asset('images/support.svg')}}" alt="Image" class="imf-fluid">
 									</div>
 									<h3>24/7 Support</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>Whether you have a question about an order or need help finding the perfect item, our team is here for you — anytime, anywhere.</p>
 								</div>
 							</div>
 
@@ -72,7 +73,7 @@
 										<img src="{{asset('images/return.svg')}}" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Hassle Free Returns</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>Not quite what you expected? No problem. We make returns easy, because we want you to love every piece you bring home.</p>
 								</div>
 							</div>
 
@@ -103,13 +104,14 @@
 					</div>
 					<div class="col-lg-5 ps-lg-5">
 						<h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-						<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+						<p>We Help You Make Modern Interior Design</h2>
+						<p>At Artisan Hub, we are confident that a well-designed home should reflect your personality while supporting the talented makers in our communities. From handcrafted décor to stylish essentials, we bring you pieces that combine timeless tradition with today’s trends — all in one seamless experience.</p>
 
 						<ul class="list-unstyled custom-list my-4">
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+							<li>Stylish spaces with a native touch</li>
+							<li>Handcrafted pieces made by local artisans</li>
+							<li>Contemporary design rooted in culture and tradition</li>
+							<li>Supporting local communities with every purchase</li>
 						</ul>
 						<p><a herf="#" class="btn">Explore</a></p>
 					</div>

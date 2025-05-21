@@ -24,7 +24,7 @@
       <div class="row g-5 mb-5">
         <div class="col-lg-4">
           <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Artisan Hub<span>.</span></a></div>
-          <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+          <p class="mb-4">a catalyst for empowerment, giving artisans the confidence and opportunities to grow their skills and income.</p>
           <ul class="list-unstyled custom-social">
             <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
             <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
