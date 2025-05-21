@@ -10,12 +10,30 @@
         height: 300px; 
         overflow: hidden; 
         border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .product-thumbnail:hover {
+        transform: scale(1.03);
     }
 
     .product-thumbnail img {
         width: 100%; 
         height: 100%; 
         object-fit: cover; 
+    }
+
+    .product-card {
+        transition: box-shadow 0.3s ease;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 15px;
+        height: 100%;
+    }
+
+    .product-card:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 </style>
 
@@ -28,9 +46,6 @@
                     <h1>Shop</h1>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <!-- Optional content -->
-            </div>
         </div>
     </div>
 </div>
@@ -40,54 +55,24 @@
     <div class="container">
         <div class="row">
             @foreach($products as $product)
-                <!-- Start Product Column -->
                 <div class="col-12 col-md-4 col-lg-3 mb-5">
-                    <div class="product-item">
-                        <!-- Display product image -->
-                        <div class="product-thumbnail">
-                            <img src="{{ asset('storage/images/' . $product->image) }}" 
-                                 class="img-fluid"
-                                 alt="{{ $product->name }}">
-                        </div>
-
-                        <!-- Display product name -->
-                        <h3 class="product-title">{{ $product->name }}</h3>
-
-                        <!-- Display product category -->
-                        <p class="product-category text-muted">{{ $product->category->name }}</p>
-
-                        <!-- Display product price -->
-                        <strong class="product-price">₱{{ number_format($product->price, 2) }}</strong>
-
-                        <!-- Display product description -->
-                        <p class="product-description">{{ Str::limit($product->description, 100, '...') }}</p>
-
-
-                        <!-- Add to Cart Form -->
-                        <form action="{{ route('cart.add') }}" method="POST" class="mt-3">
-                            @csrf
-                            <input type="hidden" name="product_id" value="{{ $product->id }}">
-
-                            <!-- Quantity Input Field -->
-                            <div class="quantity-input mb-2">
-                                <label for="quantity-{{ $product->id }}" class="form-label">Quantity</label>
-                                <input type="number" 
-                                       id="quantity-{{ $product->id }}" 
-                                       name="quantity" 
-                                       value="1" 
-                                       min="1" 
-                                       class="form-control" 
-                                       style="width: 100px;">
+                    <div class="product-card">
+                        <a href="{{ route('buyer.products.show', $product->id) }}" class="d-block">
+                            <div class="product-thumbnail">
+                                <img src="{{ asset('storage/images/' . $product->image) }}" 
+                                     class="img-fluid"
+                                     alt="{{ $product->name }}">
                             </div>
+                        </a>
 
-                            <!-- Add to Cart Button -->
-                            <button type="submit" class="btn btn-black btn-sm btn-block">
-                                Add to Cart
-                            </button>
-                        </form>
+                        <div class="product-info mt-3">
+                            <h3 class="product-title">{{ $product->name }}</h3>
+                            <p class="product-category text-muted">{{ $product->category->name }}</p>
+                            <strong class="product-price">₱{{ number_format($product->price, 2) }}</strong>
+                            <p class="product-description mt-2">{{ Str::limit($product->description, 100, '...') }}</p>
+                        </div>
                     </div>
                 </div>
-                <!-- End Product Column -->
             @endforeach
         </div>
     </div>

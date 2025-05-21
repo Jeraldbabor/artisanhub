@@ -21,6 +21,12 @@ class BuyerController extends Controller
         return view('buyer.shop', compact('products'));
     }
 
+  
+    public function show($id){
+    $product = Product::with('category')->findOrFail($id);
+    return view('buyer.product', compact('product'));
+ }
+
     public function cart()
     {
         // Get cart from session (for guests)

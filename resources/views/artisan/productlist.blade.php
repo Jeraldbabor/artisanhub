@@ -185,7 +185,7 @@
                             @endforeach
                         </tbody>
                         <tfoot>
-                            <tr>
+                                <td></td>
                                 <td colspan="4" class="text-right font-weight-bold">Total Products:</td>
                                 <td class="text-right font-weight-bold">₱{{ number_format($products->sum('price'), 2) }}</td>
                                 <td class="text-center font-weight-bold">{{ $products->sum('quantity') }}</td>

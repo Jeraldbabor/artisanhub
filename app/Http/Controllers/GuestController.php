@@ -18,4 +18,11 @@ class GuestController extends Controller
     public function cart(){
         return view('guest.cart');
     }
+
+    
+    public function showProduct($id){
+        $product = Product::with('category')->findOrFail($id);
+        return view('guest.product', compact('product'));
+    }
+
 }

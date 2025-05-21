@@ -16,6 +16,7 @@ Route::get('/', function () {
 Route::get('/home', [GuestController::class, 'index'])->name('home');
 Route::get('/shop', [GuestController::class, 'shop'])->name('shop');
 Route::get('/cart', [GuestController::class, 'cart'])->name('cart');
+Route::get('/guest/products/{id}', [GuestController::class, 'showProduct'])->name('guest.products.show');
 
 Route::get('/dashboard', function () {
     $user = Auth::user();
@@ -47,6 +48,9 @@ Route::middleware(['auth', 'buyer'])->group(function () {
     Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
     Route::post('/buyer/checkout', [BuyerController::class, 'placeOrder'])->name('checkout.place');
     Route::get('/buyer/thankyou', [BuyerController::class, 'thankyou'])->name('buyer.thankyou');
+
+    // Add this inside the buyer middleware group
+Route::get('/products/{id}', [BuyerController::class, 'show'])->name('buyer.products.show');
 
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');
     Route::post('/notifications/mark-all-read', [NotificationController::class, 'markAllAsRead'])->name('notifications.mark-all-read');
