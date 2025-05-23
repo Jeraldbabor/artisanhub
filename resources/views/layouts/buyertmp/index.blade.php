@@ -73,9 +73,6 @@
           <li class="nav-item {{ request()->is('services') ? 'active' : '' }}">
         <a class="nav-link" href="#">Services</a>
           </li>
-          <li class="nav-item {{ request()->is('blog') ? 'active' : '' }}">
-        <a class="nav-link" href="#">Blog</a>
-          </li>
           <li class="nav-item {{ request()->is('contact-us') ? 'active' : '' }}">
         <a class="nav-link" href="#">Contact us</a>
           </li>
